@@ -14,7 +14,6 @@ export const getAllUsers = async ()=>{
 
 
 export const getUserById = async(id:string):Promise<IUser>=>{
-    console.log(id);
     try{
        const  response = await axios.get(`${process.env.Backend_URL}/users/${id}`);
         return response.data.data;
