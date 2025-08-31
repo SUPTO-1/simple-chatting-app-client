@@ -1,13 +1,11 @@
 import Image from "next/image";
-import { IConversation } from "../types/Iconversation.type";
 import { IUser } from "@/features/users/types/user.type";
 
 interface ConversationCardProps {
-  conversation: IConversation;
   oppositeUser: IUser;
 }
 
-const ConversationCard: React.FC<ConversationCardProps> = ({ conversation, oppositeUser }) => {
+const ConversationCard: React.FC<ConversationCardProps> = ({ oppositeUser }) => {
   return (
     <div className="w-full p-4 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition-colors mb-4">
       <div className="flex items-center">

@@ -1,4 +1,5 @@
 export interface IMessage {
+    _id:string;
     conversationId:string;
     senderId:string;
     content:string;

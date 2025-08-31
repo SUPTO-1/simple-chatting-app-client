@@ -14,7 +14,7 @@ export const getUserConversations = async(userId:string):Promise<IConversation[]
     }
 }
 
-export const getConversationMessage = async(conversationId:string):Promise<IMessage>=>{
+export const getConversationMessage = async(conversationId:string):Promise<IMessage[]>=>{
     try{
         const response = await axios.get(`${process.env.Backend_URL}/conversations/message/${conversationId}`)
         return response.data.data;
